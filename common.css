@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #BBB;
+    text-decoration: none;
+    font-style: italic;
+}
+
+body {
+    background: #333;
+    color: white;
+}
+
+footer {
+    background: linear-gradient(#333, #222);
+    color: white;
+    font: 1em/1.2 sans-serif;
+    grid-area: footer;
+    margin-top: 2em;
+    padding-bottom: 0.4em;
+    text-align: center;
+}
+
+header {
+    padding-top: 1em;
+    text-align: center;
+    width: 100%;
+}
+
+nav {
+    padding-bottom: 5px;
+    margin-bottom: 0.5em;
+}
+
+nav a {
+    color: white;
+    font: 2em/1.2 "splatoon2regular", sans-serif;
+    padding: 20px;
+    text-decoration: none;
+}
+
+nav li {
+    display: inline;
+    padding: 1.2em;
+}
+
+nav ul {
+    display: grid;
+    list-style: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background: #999;
+    background: rgba(0, 0, 0, 0.2);
+    transition: 0.5s background-color;
+}
+
+.a-container {
+    display: inline-block;
+    margin: 0.3em;
+}
+
+.headerwrap {
+    background-image: url("../images/stream-bg-stripes.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-area: header;
+    width: 100%;
+}
+
+.toplogo {
+    background-image: url(../images/inkbg.png);
+    /* hide bg offscreen */
+    background-position: -300px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 6em;
+    padding: 2em;
+    transition: 0.5s background-image;
+}
+
+.toplogo:hover {
+    /* when hovered, bring bg back to center */
+    background-position: center center;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        text-align: center;
+        padding-bottom: 1.5em;
+    }
+
+    nav ul {
+        display: inline;
+    }
+}

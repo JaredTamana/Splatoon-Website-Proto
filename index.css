@@ -1,0 +1,139 @@
+body {
+    background: #333;
+    display: grid;
+    grid-template-areas: "header"
+        "row-one"
+        "row-two"
+        "row-three"
+        "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+
+.index-row {
+    text-align: center;
+}
+
+.index-row img {
+    max-width: 90%;
+}
+
+.index-row-one {
+    grid-area: row-one;
+}
+
+.index-row-two {
+    grid-area: row-two;
+}
+
+.index-row-three {
+    display: grid;
+    grid-area: row-three;
+}
+
+.index-row-three a {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../images/stream-bg-stripes.png);
+    border: 2px solid white;
+    border-radius: 75px;
+    color: white;
+    display: block;
+    font: 2em/1.2 "splatoon2regular";
+    padding: 0 0.4em;
+}
+
+.img-container {
+    margin: 1em;
+    max-height: 40%;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        /* grids are controlled individually */
+        display: block;
+    }
+
+    .img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        max-height: 100%;
+        opacity: 0.7;
+    }
+
+    .img-container img {
+        flex-shrink: 0;
+        min-width: 100%;
+        min-height: 100%;
+    }
+
+    .img-container:hover {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
+    .index-row-one {
+        display: grid;
+        grid-template-areas:
+            "gear modes news";
+        grid-template-columns: 30% 30% 40%;
+        grid-template-rows: auto;
+        object-fit: cover;
+    }
+
+    .index-row-two {
+        display: grid;
+        grid-template-areas:
+            "community future";
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto;
+    }
+
+    .index-row-three {
+        display: grid;
+        grid-template-areas:
+            "resources nso buy official";
+        grid-template-columns: 25% 25% 25% 25%;
+        grid-template-rows: auto;
+    }
+
+    /* lots of area declarations */
+
+    .buy {
+        grid-area: buy;
+    }
+
+    .community {
+        grid-area: community;
+    }
+
+    .future {
+        grid-area: future;
+    }
+
+    .gear {
+        grid-area: gear;
+    }
+
+    .modes {
+        grid-area: modes;
+    }
+
+    .news {
+        grid-area: news;
+    }
+
+    .nso {
+        grid-area: nso;
+    }
+
+    .official {
+        grid-area: official;
+    }
+
+    .resources {
+        grid-area: resources;
+    }
+
+}
